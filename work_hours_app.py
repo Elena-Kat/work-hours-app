@@ -14,9 +14,9 @@ st.markdown("### Enter Start and End Times")
 for day in days:
     col1, col2 = st.columns(2)
     with col1:
-        start = st.text_input(f"{day} Start", "8:30", key=f"{day}_start")
+        start = st.text_input(f"{day} Start", "7:00", key=f"{day}_start")
     with col2:
-        end = st.text_input(f"{day} End", "15:30", key=f"{day}_end")
+        end = st.text_input(f"{day} End", "14:36", key=f"{day}_end")
     work_times[day] = (start, end)
 
 def compute_duration(start, end):
