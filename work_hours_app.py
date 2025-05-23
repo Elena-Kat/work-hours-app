@@ -39,11 +39,11 @@ total_required = required_daily * len(days)
 time_diff_minutes = int((total_worked - total_required).total_seconds() / 60)
 diff_sign = "+" if time_diff_minutes > 0 else ""
 
-st.markdown("### Daily Work Summary")
-for day in days:
-    st.write(f"{day}: Worked {daily_durations[day]}")
-
 st.markdown("### Weekly Totals")
 st.write(f"**Total Worked:** {total_worked.total_seconds() / 3600:.2f} hours")
 st.write("**Required:** 38.00 hours")
 st.write(f"**Difference:** {diff_sign}{time_diff_minutes} minutes")
+
+st.markdown("### Daily Work Summary")
+for day in days:
+    st.write(f"{day}: Worked {daily_durations[day]}")
